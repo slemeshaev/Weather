@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  Weather
 //
-//  Created by Stanislav Lemeshaev on 16.10.2022.
-//  Copyright © 2022 slemeshaev. All rights reserved.
+//  Created by Stanislav Lemeshaev on 01.05.2023.
+//  Copyright © 2023 slemeshaev. All rights reserved.
 //
 
 import UIKit
