@@ -10,6 +10,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
     // MARK: - IBOutlets
+    @IBOutlet private weak var logoImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
@@ -34,6 +35,8 @@ class LoginViewController: UIViewController {
     // MARK: - Private
     private func configureUI() {
         view.backgroundColor = UIColor(named: "w.background.color")
+        
+        logoImageView.image = UIImage(named: "weather_logo")
         
         titleLabel.text = "Weather"
         titleLabel.textColor = UIColor(named: "w.title.color")
