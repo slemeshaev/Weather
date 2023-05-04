@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var signInButton: UIButton!
-    @IBOutlet private weak var cannotAccessButton: UIButton!
+    @IBOutlet private weak var signUpButton: UIButton!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -28,7 +28,7 @@ class LoginViewController: UIViewController {
         print(#function)
     }
     
-    @IBAction private func cannotAccessButtonTapped(_ sender: UIButton) {
+    @IBAction private func signUpButtonTapped(_ sender: UIButton) {
         print(#function)
     }
     
@@ -42,18 +42,24 @@ class LoginViewController: UIViewController {
         titleLabel.textColor = UIColor(named: "w.title.color")
         
         usernameTextField.placeholder = "Username"
+        usernameTextField.textContentType = .username
+        
         passwordTextField.placeholder = "Password"
+        passwordTextField.textContentType = .password
+        passwordTextField.isSecureTextEntry = true
         
         let signInAttributedTitle = NSAttributedString(
             string: "Sign In",
             attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18),
-                         NSAttributedString.Key.foregroundColor: UIColor(named: "w.button.title.color")!])
+                         NSAttributedString.Key.foregroundColor: UIColor(named: "w.title.color")!])
         signInButton.setAttributedTitle(signInAttributedTitle, for: .normal)
-        signInButton.layer.cornerRadius = 6.0
+        signInButton.layer.cornerRadius = 10.0
+        signInButton.backgroundColor = UIColor(named: "w.button.color")
         
-        let cannotAccessAttributedTitle = NSAttributedString(
-            string: "Cannot access your account?",
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "w.title.color")!])
-        cannotAccessButton.setAttributedTitle(cannotAccessAttributedTitle, for: .normal)
+        let signUpAttributedTitle = NSMutableAttributedString(
+            string: "Don’t have an account? ",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "w.subtitle.color")!])
+        signUpAttributedTitle.append(NSAttributedString(string: "Sign up", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "w.title.color")!]))
+        signUpButton.setAttributedTitle(signUpAttributedTitle, for: .normal)
     }
 }
