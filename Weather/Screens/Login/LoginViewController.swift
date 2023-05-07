@@ -27,24 +27,24 @@ class LoginViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWasShown),
-                                               name: UIResponder.keyboardWillShowNotification, object: nil)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillBeHidden(notification:)),
-                                               name: UIResponder.keyboardWillHideNotification, object: nil)
+        addObservers()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+        removeObservers()
     }
     
     // MARK: - IBActions
     @IBAction private func signInButtonTapped(_ sender: UIButton) {
-        print(#function)
+        guard let username = usernameTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        
+        if username == "admin" && password == "123" {
+            successAlertMessage(username)
+        } else {
+            failureAlertMessage()
+        }
     }
     
     @IBAction private func signUpButtonTapped(_ sender: UIButton) {
@@ -71,6 +71,38 @@ class LoginViewController: UIViewController {
     }
     
     // MARK: - Private
+    private func addObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWasShown),
+                                               name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillBeHidden(notification:)),
+                                               name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    private func removeObservers() {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    private func successAlertMessage(_ username: String) {
+        let alertController = UIAlertController(title: "Welcome \(username)",
+                                                message: "You have successfully entered!",
+                                                preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default)
+        
+        alertController.addAction(okAction)
+        present(alertController, animated: true)
+    }
+    
+    private func failureAlertMessage() {
+        let alertController = UIAlertController(title: "Try that again",
+                                                message: "Your credentials are incorrect!",
+                                                preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true)
+    }
+    
     private func configureUI() {
         contentView.backgroundColor = UIColor(named: "w.background.color")
         
