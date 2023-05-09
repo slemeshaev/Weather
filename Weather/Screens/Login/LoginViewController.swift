@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol LoginViewControllerDelegate: AnyObject {
+    func loginViewControllerSignInTapped()
+}
+
 class LoginViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet private weak var scrollView: UIScrollView!
@@ -19,6 +23,8 @@ class LoginViewController: UIViewController {
     @IBOutlet private weak var signInButton: UIButton!
     @IBOutlet private weak var signUpButton: UIButton!
     
+    weak var delegate: LoginViewControllerDelegate?
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,11 +33,13 @@ class LoginViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
         addObservers()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
         removeObservers()
     }
     
@@ -41,7 +49,8 @@ class LoginViewController: UIViewController {
         guard let password = passwordTextField.text else { return }
         
         if username == "admin" && password == "123" {
-            successAlertMessage(username)
+            let cityListViewController = CityListViewController.loadFromStoryboard()
+            navigationController?.pushViewController(cityListViewController, animated: true)
         } else {
             failureAlertMessage()
         }

@@ -11,7 +11,7 @@
         <!--City List View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="CityListViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CityListViewController" id="Y6W-OH-hqX" customClass="CityListViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,10 +40,13 @@
                             <constraint firstItem="cUG-74-dea" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="vVv-TY-I3y"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="cUG-74-dea" id="eep-GM-nIo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2.2900763358778624" y="-67.605633802816911"/>
+            <point key="canvasLocation" x="-16" y="-82"/>
         </scene>
     </scenes>
     <resources>

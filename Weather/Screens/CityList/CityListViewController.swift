@@ -9,9 +9,12 @@
 import UIKit
 
 class CityListViewController: UIViewController {
+    // MARK: - IBOutlets
+    @IBOutlet private weak var tableView: UITableView!
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .orange
+        tableView.backgroundColor = .orange
     }
 }
