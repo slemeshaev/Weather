@@ -49,8 +49,7 @@ class LoginViewController: UIViewController {
         guard let password = passwordTextField.text else { return }
         
         if username == "admin" && password == "123" {
-            let cityListViewController = CityListViewController.loadFromStoryboard()
-            navigationController?.pushViewController(cityListViewController, animated: true)
+            delegate?.loginViewControllerSignInTapped()
         } else {
             failureAlertMessage()
         }
