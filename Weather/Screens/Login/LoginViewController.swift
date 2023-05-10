@@ -114,6 +114,9 @@ class LoginViewController: UIViewController {
     private func configureUI() {
         contentView.backgroundColor = UIColor(named: "w.background.color")
         
+        scrollView.showsHorizontalScrollIndicator = false
+        scrollView.showsVerticalScrollIndicator = false
+        
         logoImageView.image = UIImage(named: "weather_logo")
         
         titleLabel.text = "Weather"
