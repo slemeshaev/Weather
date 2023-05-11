@@ -45,10 +45,7 @@ class LoginViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction private func signInButtonTapped(_ sender: UIButton) {
-        guard let username = usernameTextField.text else { return }
-        guard let password = passwordTextField.text else { return }
-        
-        if username == "admin" && password == "123" {
+        if isValidateCredentials() {
             delegate?.loginViewControllerSignInTapped()
         } else {
             failureAlertMessage()
@@ -91,14 +88,17 @@ class LoginViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    private func successAlertMessage(_ username: String) {
-        let alertController = UIAlertController(title: "Welcome \(username)",
-                                                message: "You have successfully entered!",
-                                                preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Ok", style: .default)
+    private func isValidateCredentials() -> Bool {
+        guard let username = usernameTextField.text,
+              let password = passwordTextField.text else {
+            return false
+        }
         
-        alertController.addAction(okAction)
-        present(alertController, animated: true)
+        if username == "admin" && password == "123" {
+            return true
+        }
+        
+        return false
     }
     
     private func failureAlertMessage() {
