@@ -1,0 +1,7 @@
+// MARK: - Login
+"Login.LogoTitle" = "Weather";
+"Login.Username.Placeholder" = "Username";
+"Login.Password.Placeholder" = "Password";
+"Login.SignIn" = "Sign In";
+"Login.SignUp" = "Sign Up";
+"Login.NoAccount" = "Don’t have an account? ";

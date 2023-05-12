@@ -1,0 +1,7 @@
+// MARK: - Login
+"Login.LogoTitle" = "Погода";
+"Login.Username.Placeholder" = "Имя пользователя";
+"Login.Password.Placeholder" = "Пароль";
+"Login.SignIn" = "Войти";
+"Login.SignUp" = "Зарегистрироваться";
+"Login.NoAccount" = "У вас нет аккаунта? ";

@@ -71,7 +71,7 @@
 				66FE7F842A0E88FF0052D23E /* Common */,
 				66FE7F852A0E890F0052D23E /* Config */,
 				66FE7F832A0E88AA0052D23E /* Extensions */,
-				66FE7F822A0E88990052D23E /* Localization */,
+				66FE7F822A0E88990052D23E /* localization */,
 				66FE7F862A0E89330052D23E /* Resources */,
 			);
 			path = Utilities;
@@ -129,12 +129,12 @@
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		66FE7F822A0E88990052D23E /* Localization */ = {
+		66FE7F822A0E88990052D23E /* localization */ = {
 			isa = PBXGroup;
 			children = (
 				66FE7F802A0E86F10052D23E /* Localizable.strings */,
 			);
-			path = Localization;
+			path = localization;
 			sourceTree = "<group>";
 		};
 		66FE7F832A0E88AA0052D23E /* Extensions */ = {
