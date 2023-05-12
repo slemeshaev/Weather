@@ -120,18 +120,20 @@ class LoginViewController: UIViewController {
         
         logoImageView.image = UIImage(named: "weather_logo")
         
-        titleLabel.text = "Weather"
+        titleLabel.text = "Login.LogoTitle".localized
         titleLabel.textColor = UIColor(named: "w.title.color")
         
-        usernameTextField.placeholder = "Username"
+        usernameTextField.placeholder = "Login.Username.Placeholder".localized
+        usernameTextField.backgroundColor = UIColor(named: "w.content.background.color")
         usernameTextField.textContentType = .username
         
-        passwordTextField.placeholder = "Password"
+        passwordTextField.placeholder = "Login.Password.Placeholder".localized
+        passwordTextField.backgroundColor = UIColor(named: "w.content.background.color")
         passwordTextField.textContentType = .password
         passwordTextField.isSecureTextEntry = true
         
         let signInAttributedTitle = NSAttributedString(
-            string: "Sign In",
+            string: "Login.SignIn".localized,
             attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18),
                          NSAttributedString.Key.foregroundColor: UIColor(named: "w.title.color")!])
         signInButton.setAttributedTitle(signInAttributedTitle, for: .normal)
@@ -139,9 +141,9 @@ class LoginViewController: UIViewController {
         signInButton.backgroundColor = UIColor(named: "w.button.color")
         
         let signUpAttributedTitle = NSMutableAttributedString(
-            string: "Don’t have an account? ",
+            string: "Login.NoAccount".localized,
             attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "w.subtitle.color")!])
-        signUpAttributedTitle.append(NSAttributedString(string: "Sign up", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "w.title.color")!]))
+        signUpAttributedTitle.append(NSAttributedString(string: "Login.SignUp".localized, attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "w.title.color")!]))
         signUpButton.setAttributedTitle(signUpAttributedTitle, for: .normal)
         
         let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
