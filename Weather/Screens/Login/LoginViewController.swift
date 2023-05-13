@@ -112,38 +112,50 @@ class LoginViewController: UIViewController {
     }
     
     private func configureUI() {
-        contentView.backgroundColor = UIColor(named: "w.background.color")
+        contentView.backgroundColor = Color.ContentPrimary.background
         
-        scrollView.backgroundColor = UIColor(named: "w.background.color")
+        scrollView.backgroundColor = Color.ContentPrimary.background
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.showsVerticalScrollIndicator = false
         
         logoImageView.image = UIImage(named: "weather_logo")
         
         titleLabel.text = "Login.LogoTitle".localized
-        titleLabel.textColor = UIColor(named: "w.title.color")
+        titleLabel.textColor = Color.ContentPrimary.Text.title
         
-        usernameTextField.placeholder = "Login.Username.Placeholder".localized
-        usernameTextField.backgroundColor = UIColor(named: "w.content.background.color")
+        usernameTextField.attributedPlaceholder = NSAttributedString(
+            string: "Login.Username.Placeholder".localized,
+            attributes: [NSAttributedString.Key.foregroundColor: Color.ContentPrimary.Text.subtitle]
+        )
+        
         usernameTextField.textContentType = .username
+        usernameTextField.backgroundColor = Color.ContentPrimary.placeholder
+        usernameTextField.textColor = Color.ContentPrimary.Text.text
+        usernameTextField.layer.cornerRadius = 10.0
         
-        passwordTextField.placeholder = "Login.Password.Placeholder".localized
-        passwordTextField.backgroundColor = UIColor(named: "w.content.background.color")
+        passwordTextField.attributedPlaceholder = NSAttributedString(
+            string: "Login.Password.Placeholder".localized,
+            attributes: [NSAttributedString.Key.foregroundColor: Color.ContentPrimary.Text.subtitle]
+        )
+        
         passwordTextField.textContentType = .password
+        passwordTextField.backgroundColor = Color.ContentPrimary.placeholder
+        passwordTextField.textColor = Color.ContentPrimary.Text.text
+        passwordTextField.layer.cornerRadius = 10.0
         passwordTextField.isSecureTextEntry = true
         
         let signInAttributedTitle = NSAttributedString(
             string: "Login.SignIn".localized,
             attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18),
-                         NSAttributedString.Key.foregroundColor: UIColor(named: "w.title.color")!])
+                         NSAttributedString.Key.foregroundColor: Color.ContentPrimary.Text.title])
         signInButton.setAttributedTitle(signInAttributedTitle, for: .normal)
         signInButton.layer.cornerRadius = 10.0
-        signInButton.backgroundColor = UIColor(named: "w.button.color")
+        signInButton.backgroundColor = Color.ContentPrimary.button
         
         let signUpAttributedTitle = NSMutableAttributedString(
             string: "Login.NoAccount".localized,
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "w.subtitle.color")!])
-        signUpAttributedTitle.append(NSAttributedString(string: "Login.SignUp".localized, attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "w.title.color")!]))
+            attributes: [NSAttributedString.Key.foregroundColor: Color.ContentPrimary.Text.subtitle])
+        signUpAttributedTitle.append(NSAttributedString(string: "Login.SignUp".localized, attributes: [NSAttributedString.Key.foregroundColor: Color.ContentPrimary.Text.title]))
         signUpButton.setAttributedTitle(signUpAttributedTitle, for: .normal)
         
         let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
