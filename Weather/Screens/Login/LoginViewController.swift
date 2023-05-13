@@ -102,10 +102,10 @@ class LoginViewController: UIViewController {
     }
     
     private func failureAlertMessage() {
-        let alertController = UIAlertController(title: "Try that again",
-                                                message: "Your credentials are incorrect!",
+        let alertController = UIAlertController(title: "Login.Failure.Title".localized,
+                                                message: "Login.Failure.Message".localized,
                                                 preferredStyle: .alert)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        let cancelAction = UIAlertAction(title: "Login.Failure.Cancel".localized, style: .cancel)
         
         alertController.addAction(cancelAction)
         present(alertController, animated: true)

@@ -5,3 +5,6 @@
 "Login.SignIn" = "Sign In";
 "Login.SignUp" = "Sign Up";
 "Login.NoAccount" = "Don’t have an account? ";
+"Login.Failure.Title" = "Try that again";
+"Login.Failure.Message" = "Your credentials are incorrect!";
+"Login.Failure.Cancel" = "Cancel";
