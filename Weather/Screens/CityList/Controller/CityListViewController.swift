@@ -21,6 +21,7 @@ class CityListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         cityList = createCityList()
+        configureNavigationBarWithTitle("City List")
     }
     
     // MARK: - Private
