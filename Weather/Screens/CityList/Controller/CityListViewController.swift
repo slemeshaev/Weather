@@ -9,7 +9,7 @@
 import UIKit
 
 class CityListViewController: UIViewController {
-    private let kCityListCell = "CityListCell"
+    private let reuseId = "CityListCell"
     
     // MARK: - IBOutlets
     @IBOutlet private weak var tableView: UITableView!
@@ -20,8 +20,12 @@ class CityListViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        cityList = createCityList()
-        configureNavigationBarWithTitle("City List")
+        configureUI()
+    }
+    
+    // MARK: - Actions
+    @objc private func addButtonTapped() {
+        print(#function)
     }
     
     // MARK: - Private
@@ -30,6 +34,14 @@ class CityListViewController: UIViewController {
         let moscow = City(icon: UIImage(named: "moscow")!, name: "Moscow")
         let samara = City(icon: UIImage(named: "samara")!, name: "Samara")
         return CityList(cityList: [voronezh, moscow, samara])
+    }
+    
+    private func configureUI() {
+        cityList = createCityList()
+        configureNavigationBarWithTitle("City List")
+        
+        let item = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
+        navigationItem.rightBarButtonItem = item
     }
 }
 
@@ -46,7 +58,7 @@ extension CityListViewController: UITableViewDataSource {
         
         let cityListViewCellModel = CityListViewCellModel(city: city)
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: kCityListCell, for: indexPath) as? CityListViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseId, for: indexPath) as? CityListViewCell else {
             return UITableViewCell()
         }
         
