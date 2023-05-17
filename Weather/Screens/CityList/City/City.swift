@@ -8,7 +8,12 @@
 
 import UIKit
 
-struct City {
+struct City: Equatable {
     let icon: UIImage
     let name: String
+    
+    // MARK: - Equatable
+    static func == (lhs: City, rhs: City) -> Bool {
+        return lhs.name == rhs.name
+    }
 }

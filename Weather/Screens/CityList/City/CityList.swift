@@ -39,4 +39,10 @@ class CityList {
         
         return cityList[index]
     }
+    
+    func removeCity(city: City) {
+        if let index = cityList.firstIndex(of: city) {
+            cityList.remove(at: index)
+        }
+    }
 }

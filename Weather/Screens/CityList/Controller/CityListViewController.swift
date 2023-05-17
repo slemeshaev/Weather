@@ -66,4 +66,12 @@ extension CityListViewController: UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            guard let city = cityList.cityAtIndex(index: indexPath.row) else { return }
+            cityList.removeCity(city: city)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
 }
