@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol CityListViewControllerDelegate: AnyObject {
+    func cityListViewControllerAddCityTapped()
+}
+
 class CityListViewController: UIViewController {
     private let reuseId = "CityListCell"
     
@@ -17,6 +21,8 @@ class CityListViewController: UIViewController {
     // MARK: - Properties
     private var cityList = CityList(cityList: [])
     
+    weak var delegate: CityListViewControllerDelegate?
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +30,8 @@ class CityListViewController: UIViewController {
     }
     
     // MARK: - Actions
-    @objc private func addButtonTapped() {
-        print(#function)
+    @objc private func addCityTapped() {
+        delegate?.cityListViewControllerAddCityTapped()
     }
     
     // MARK: - Private
@@ -40,7 +46,7 @@ class CityListViewController: UIViewController {
         cityList = createCityList()
         configureNavigationBarWithTitle("City List")
         
-        let item = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
+        let item = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addCityTapped))
         navigationItem.rightBarButtonItem = item
     }
 }

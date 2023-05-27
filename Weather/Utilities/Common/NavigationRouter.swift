@@ -30,6 +30,16 @@ class NavigationRouter {
 extension NavigationRouter: LoginViewControllerDelegate {
     func loginViewControllerSignInTapped() {
         let cityListViewController = CityListViewController.loadFromStoryboard()
+        cityListViewController.delegate = self
+        
         navigationController.pushViewController(cityListViewController, animated: true)
+    }
+}
+
+// MARK: - CityListViewControllerDelegate
+extension NavigationRouter: CityListViewControllerDelegate {
+    func cityListViewControllerAddCityTapped() {
+        let addCityViewController = AddCityViewController.loadFromStoryboard()
+        navigationController.pushViewController(addCityViewController, animated: true)
     }
 }
