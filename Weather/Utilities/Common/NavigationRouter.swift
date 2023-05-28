@@ -40,6 +40,6 @@ extension NavigationRouter: LoginViewControllerDelegate {
 extension NavigationRouter: CityListViewControllerDelegate {
     func cityListViewControllerAddCityTapped() {
         let addCityViewController = AddCityViewController.loadFromStoryboard()
-        navigationController.pushViewController(addCityViewController, animated: true)
+        navigationController.present(addCityViewController, animated: true)
     }
 }
