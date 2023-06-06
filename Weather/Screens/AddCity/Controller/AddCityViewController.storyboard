@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="TA4-2H-bO1">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddCityCell" rowHeight="70" id="TA4-2H-bO1" customClass="AddCityViewCell" customModule="Weather" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TA4-2H-bO1" id="Zm7-Dq-O9O">
@@ -53,11 +53,15 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="iconView" destination="1sd-Zj-MNq" id="YwT-t5-XPh"/>
-                                            <outlet property="titleLabel" destination="Nor-Dq-yHf" id="x9J-QJ-o85"/>
+                                            <outlet property="iconView" destination="1sd-Zj-MNq" id="Plg-xR-3Wr"/>
+                                            <outlet property="titleLabel" destination="Nor-Dq-yHf" id="BUU-IN-Tlo"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="RfL-O9-lVW" id="elV-gF-bGZ"/>
+                                    <outlet property="delegate" destination="RfL-O9-lVW" id="FWP-5B-dL7"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wwh-bt-wxq"/>
@@ -69,6 +73,9 @@
                             <constraint firstItem="z1P-EY-dWU" firstAttribute="top" secondItem="nKv-PR-hgl" secondAttribute="top" id="xa2-4n-ohl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="z1P-EY-dWU" id="fkt-IA-js6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XSl-e7-7TN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

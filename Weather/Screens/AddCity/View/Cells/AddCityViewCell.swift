@@ -1,20 +1,20 @@
 //
-//  CityListViewCell.swift
+//  AddCityViewCell.swift
 //  Weather
 //
-//  Created by Stanislav Lemeshaev on 14.05.2023.
+//  Created by Stanislav Lemeshaev on 05.06.2023.
 //  Copyright © 2023 slemeshaev. All rights reserved.
 //
 
 import UIKit
 
-class CityListViewCell: UITableViewCell {
+class AddCityViewCell: UITableViewCell {
     // MARK: - Properties
     @IBOutlet private weak var iconView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     
     // MARK: - Interface
-    func configure(with model: CityListViewCellModel) {
+    func configure(with model: AddCityViewCellModel) {
         iconView.image = model.iconImage
         titleLabel.text = model.cityName
     }
