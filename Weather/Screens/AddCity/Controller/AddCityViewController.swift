@@ -24,15 +24,15 @@ class AddCityViewController: UIViewController {
     }
     
     // MARK: - Private
-    private func createCityList() -> CityList {
-        let volgograd = City(icon: UIImage(named: "voronezh")!, name: "Volgograd")
-        let belgorod = City(icon: UIImage(named: "moscow")!, name: "Belgorod")
-        let khabarovsk = City(icon: UIImage(named: "samara")!, name: "Khabarovsk")
-        return CityList(cityList: [volgograd, belgorod, khabarovsk])
-    }
-    
     private func configureUI() {
         cityList = createCityList()
+    }
+    
+    private func createCityList() -> CityList {
+        let volgograd = City(icon: UIImage(named: "noImage")!, name: "Volgograd")
+        let belgorod = City(icon: UIImage(named: "noImage")!, name: "Belgorod")
+        let khabarovsk = City(icon: UIImage(named: "noImage")!, name: "Khabarovsk")
+        return CityList(cityList: [volgograd, belgorod, khabarovsk])
     }
 }
 
@@ -56,5 +56,12 @@ extension AddCityViewController: UITableViewDataSource {
         cell.configure(with: addCityViewCellModel)
         
         return cell
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension AddCityViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Add City"
     }
 }
