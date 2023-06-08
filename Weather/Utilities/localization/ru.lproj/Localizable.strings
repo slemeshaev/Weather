@@ -8,3 +8,6 @@
 "Login.Failure.Title" = "Попробуйте еще раз";
 "Login.Failure.Message" = "Ваши учетные данные неверны!";
 "Login.Failure.Cancel" = "Отмена";
+
+// MARK: - Add City
+"AddCity.Header.Title" = "Добавить город";

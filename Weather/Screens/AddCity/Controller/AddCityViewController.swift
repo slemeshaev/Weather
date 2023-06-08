@@ -36,8 +36,13 @@ class AddCityViewController: UIViewController {
     }
 }
 
-// MARK: - UITableViewDataSource
-extension AddCityViewController: UITableViewDataSource {
+// MARK: - UITableViewDataSource, UITableViewDelegate
+extension AddCityViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = AddCityHeaderView()
+        return headerView
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cityList.count
     }
@@ -56,12 +61,5 @@ extension AddCityViewController: UITableViewDataSource {
         cell.configure(with: addCityViewCellModel)
         
         return cell
-    }
-}
-
-// MARK: - UITableViewDelegate
-extension AddCityViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Add City"
     }
 }

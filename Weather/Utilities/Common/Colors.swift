@@ -17,7 +17,7 @@ struct Color {
         
         static var background: UIColor { "w.content.primary".uiColor }
         static var button: UIColor { "w.content.background.button".uiColor }
-        static var placeholder: UIColor { "w.content.background.placeholder".uiColor }
+        static var placeholder: UIColor { "w.content.background".uiColor }
         
         // MARK: - Text
         struct Text {
