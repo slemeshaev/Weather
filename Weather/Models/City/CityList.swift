@@ -45,4 +45,8 @@ class CityList {
             cityList.remove(at: index)
         }
     }
+    
+    func hasCity(_ city: City) -> Bool {
+        return cityList.firstIndex(of: city) == nil
+    }
 }

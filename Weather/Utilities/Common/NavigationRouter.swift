@@ -40,6 +40,19 @@ extension NavigationRouter: LoginViewControllerDelegate {
 extension NavigationRouter: CityListViewControllerDelegate {
     func cityListViewControllerAddCityTapped() {
         let addCityViewController = AddCityViewController.loadFromStoryboard()
+        addCityViewController.delegate = self
+        
         navigationController.present(addCityViewController, animated: true)
+    }
+}
+
+// MARK: - AddCityViewControllerDelegate
+extension NavigationRouter: AddCityViewControllerDelegate {
+    func addCityViewControllerDidSelect(city: City) {
+        if let cityListViewController = navigationController.viewControllers.last as? CityListViewController {
+            cityListViewController.updateTable(with: city)
+        }
+        
+        navigationController.dismiss(animated: true)
     }
 }

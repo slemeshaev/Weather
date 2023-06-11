@@ -34,6 +34,14 @@ class CityListViewController: UIViewController {
         delegate?.cityListViewControllerAddCityTapped()
     }
     
+    // MARK: - Interface
+    func updateTable(with city: City) {
+        if cityList.hasCity(city) {
+            cityList.addCity(city: city)
+            tableView.reloadData()
+        }
+    }
+    
     // MARK: - Private
     private func createCityList() -> CityList {
         let voronezh = City(icon: UIImage(named: "voronezh")!, name: "Voronezh")
@@ -51,10 +59,14 @@ class CityListViewController: UIViewController {
     }
 }
 
-// MARK: - UITableViewDataSource
-extension CityListViewController: UITableViewDataSource {
+// MARK: - UITableViewDataSource, UITableViewDelegate 
+extension CityListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cityList.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

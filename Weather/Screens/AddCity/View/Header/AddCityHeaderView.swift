@@ -14,7 +14,7 @@ class AddCityHeaderView: UIView {
         let label = UILabel()
         label.text = "AddCity.Header.Title".localized
         label.textColor = Color.ContentPrimary.Text.text
-        label.font = .boldSystemFont(ofSize: 20)
+        label.font = .boldSystemFont(ofSize: 18)
         return label
     }()
     
