@@ -10,6 +10,7 @@ import UIKit
 
 protocol CityListViewControllerDelegate: AnyObject {
     func cityListViewControllerAddCityTapped()
+    func cityListViewControllerForecastFor(city: City)
 }
 
 class CityListViewController: UIViewController {
@@ -66,6 +67,8 @@ extension CityListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let city = cityList.cityAtIndex(index: indexPath.row) else { return }
+        delegate?.cityListViewControllerForecastFor(city: city)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     

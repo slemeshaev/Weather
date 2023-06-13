@@ -38,6 +38,13 @@ extension NavigationRouter: LoginViewControllerDelegate {
 
 // MARK: - CityListViewControllerDelegate
 extension NavigationRouter: CityListViewControllerDelegate {
+    func cityListViewControllerForecastFor(city: City) {
+        let forecastViewController = ForecastViewController.loadFromStoryboard()
+        forecastViewController.city = city
+        
+        navigationController.pushViewController(forecastViewController, animated: true)
+    }
+    
     func cityListViewControllerAddCityTapped() {
         let addCityViewController = AddCityViewController.loadFromStoryboard()
         addCityViewController.delegate = self
