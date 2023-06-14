@@ -17,7 +17,7 @@ class ForecastCollectionViewCell: UICollectionViewCell {
     // MARK: - Interface
     func configure(with model: ForecastViewCellModel) {
         temperatureLabel.text = model.weatherTemperature
-        iconView.image = model.weatherIcon
+        iconView.image = UIImage(named: model.weatherIcon)
         dateLabel.text = model.date
     }
 }

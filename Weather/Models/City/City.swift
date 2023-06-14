@@ -6,10 +6,10 @@
 //  Copyright © 2023 slemeshaev. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 struct City: Equatable {
-    let icon: UIImage
+    let icon: String
     let name: String
     
     // MARK: - Equatable

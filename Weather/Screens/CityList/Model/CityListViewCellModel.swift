@@ -17,7 +17,7 @@ struct CityListViewCellModel {
     // MARK: - Properties
     private let city: City
     
-    var iconImage: UIImage {
+    var iconImage: String {
         return city.icon
     }
     

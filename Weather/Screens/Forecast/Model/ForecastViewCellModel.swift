@@ -17,7 +17,7 @@ struct ForecastViewCellModel {
     // MARK: - Properties
     private let weather: Weather
     
-    var weatherIcon: UIImage {
+    var weatherIcon: String {
         return weather.icon
     }
     

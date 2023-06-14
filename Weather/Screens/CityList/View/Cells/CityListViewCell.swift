@@ -15,7 +15,7 @@ class CityListViewCell: UITableViewCell {
     
     // MARK: - Interface
     func configure(with model: CityListViewCellModel) {
-        iconView.image = model.iconImage
+        iconView.image = UIImage(named: model.iconImage)
         titleLabel.text = model.cityName
     }
 }

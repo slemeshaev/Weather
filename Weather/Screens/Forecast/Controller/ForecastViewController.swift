@@ -13,9 +13,7 @@ class ForecastViewController: UIViewController {
     
     // MARK: - Properties
     var city: City?
-    var weather: Weather? = Weather(temperature: "30 C",
-                                    icon: UIImage(named: "noImage")!,
-                                    date: "13.06.2023")
+    var weather: Weather? = Weather(temperature: "30°C", icon: "noImage", date: "13.06.2023")
     
     // MARK: - IBOutlets
     @IBOutlet private weak var collectionView: UICollectionView!

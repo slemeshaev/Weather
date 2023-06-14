@@ -45,9 +45,10 @@ class CityListViewController: UIViewController {
     
     // MARK: - Private
     private func createCityList() -> CityList {
-        let voronezh = City(icon: UIImage(named: "voronezh")!, name: "Voronezh")
-        let moscow = City(icon: UIImage(named: "moscow")!, name: "Moscow")
-        let samara = City(icon: UIImage(named: "samara")!, name: "Samara")
+        let voronezh = City(icon: "voronezh", name: "Voronezh")
+        let moscow = City(icon: "moscow", name: "Moscow")
+        let samara = City(icon: "samara", name: "Samara")
+        
         return CityList(cityList: [voronezh, moscow, samara])
     }
     

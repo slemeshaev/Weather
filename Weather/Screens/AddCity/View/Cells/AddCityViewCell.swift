@@ -15,7 +15,7 @@ class AddCityViewCell: UITableViewCell {
     
     // MARK: - Interface
     func configure(with model: AddCityViewCellModel) {
-        iconView.image = model.iconImage
+        iconView.image = UIImage(named: model.iconImage)
         titleLabel.text = model.cityName
     }
 }

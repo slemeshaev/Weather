@@ -35,9 +35,9 @@ class AddCityViewController: UIViewController {
     }
     
     private func createCityList() -> CityList {
-        let volgograd = City(icon: UIImage(named: "noImage")!, name: "Volgograd")
-        let belgorod = City(icon: UIImage(named: "noImage")!, name: "Belgorod")
-        let khabarovsk = City(icon: UIImage(named: "noImage")!, name: "Khabarovsk")
+        let volgograd = City(icon: "noImage", name: "Volgograd")
+        let belgorod = City(icon: "noImage", name: "Belgorod")
+        let khabarovsk = City(icon: "noImage", name: "Khabarovsk")
         return CityList(cityList: [volgograd, belgorod, khabarovsk])
     }
 }

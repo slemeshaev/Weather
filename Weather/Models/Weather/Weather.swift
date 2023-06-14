@@ -6,10 +6,10 @@
 //  Copyright © 2023 slemeshaev. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 struct Weather {
     let temperature: String
-    let icon: UIImage
+    let icon: String
     let date: String
 }
