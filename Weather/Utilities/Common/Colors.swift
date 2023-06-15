@@ -28,4 +28,12 @@ struct Color {
             static var text: UIColor { "w.content.primary.text".uiColor }
         }
     }
+    
+    // MARK: - GradientPrimary
+    struct GradientPrimary {
+        private init() {}
+        
+        static var startColor: UIColor { "w.gradient.startColor".uiColor }
+        static var endColor: UIColor { "w.gradient.endColor".uiColor }
+    }
 }

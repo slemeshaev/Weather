@@ -112,9 +112,6 @@ class LoginViewController: UIViewController {
     }
     
     private func configureUI() {
-        contentView.backgroundColor = Color.ContentPrimary.background
-        
-        scrollView.backgroundColor = Color.ContentPrimary.background
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.showsVerticalScrollIndicator = false
         
