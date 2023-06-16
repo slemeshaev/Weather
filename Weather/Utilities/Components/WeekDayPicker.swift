@@ -48,12 +48,12 @@ class WeekDayPicker: UIControl {
     // MARK: - Lifecycle
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupView()
+        configureUI()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setupView()
+        configureUI()
     }
     
     override func layoutSubviews() {
@@ -70,7 +70,7 @@ class WeekDayPicker: UIControl {
     }
     
     // MARK: - Private
-    private func setupView() {
+    private func configureUI() {
         for day in Day.weekDays {
             let button = UIButton(type: .system)
             button.setTitle(day.title, for: .normal)
@@ -87,6 +87,8 @@ class WeekDayPicker: UIControl {
         stackView.distribution = .fillEqually
         
         addSubview(stackView)
+        
+        selectedDay = currentDay()
     }
     
     private func updateSelectedDay() {
@@ -94,5 +96,22 @@ class WeekDayPicker: UIControl {
             guard let day = Day(rawValue: index) else { continue }
             button.isSelected = day == selectedDay
         }
+    }
+    
+    private func currentDay() -> Day? {
+        if let number = dayOfWeek() {
+            return Day(rawValue: number - 2)
+        }
+        
+        return nil
+    }
+    
+    private func dayOfWeek() -> Int? {
+        let date = Date()
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.weekday], from: date)
+        let day = components.weekday
+        
+        return day
     }
 }
