@@ -8,41 +8,22 @@
 
 import UIKit
 
-enum Day: Int {
-    case monday, tuesday, wednesday, thursday, friday, saturday, sunday
-    
-    static let weekDays: [Day] = [monday, tuesday, wednesday, thursday, friday, saturday, sunday]
-    
-    var title: String {
-        switch self {
-            case .monday:
-                return "WeekDayPicker.Monday".localized
-            case .tuesday:
-                return "WeekDayPicker.Tuesday".localized
-            case .wednesday:
-                return "WeekDayPicker.Wednesday".localized
-            case .thursday:
-                return "WeekDayPicker.Thursday".localized
-            case .friday:
-                return "WeekDayPicker.Friday".localized
-            case .saturday:
-                return "WeekDayPicker.Saturday".localized
-            case .sunday:
-                return "WeekDayPicker.Sunday".localized
-        }
-    }
-}
-
 class WeekDayPicker: UIControl {
     // MARK: - Properties
-    private var selectedDay: Day? = nil {
+    private var selectedDay: String? = nil {
         didSet {
             updateSelectedDay()
             sendActions(for: .valueChanged)
         }
     }
     
-    private var buttons: [UIButton] = []
+    private let date = Date()
+    private let dateFormatter = DateFormatter()
+    private let calendar = Calendar(identifier: .gregorian)
+    private let currentLocale = Locale.current.identifier
+    
+    private var weekDays: [String] = []
+    private var buttonDays: [UIButton] = []
     private var stackView: UIStackView!
     
     // MARK: - Lifecycle
@@ -63,24 +44,26 @@ class WeekDayPicker: UIControl {
     
     // MARK: - Actions
     @objc private func selectDay(_ sender: UIButton) {
-        guard let index = buttons.firstIndex(of: sender) else { return }
-        guard let day = Day(rawValue: index) else { return }
-        
-        selectedDay = day
+        guard let index = buttonDays.firstIndex(of: sender) else { return }
+        selectedDay = weekDays[index]
     }
     
     // MARK: - Private
     private func configureUI() {
-        for day in Day.weekDays {
+        dateFormatter.locale = .init(identifier: currentLocale)
+        weekDays = dateFormatter.shortWeekdaySymbols
+        
+        for (_, index) in weekDays.enumerated() {
             let button = UIButton(type: .system)
-            button.setTitle(day.title, for: .normal)
+            button.setTitle(index, for: .normal)
             button.setTitleColor(.lightGray, for: .normal)
             button.setTitleColor(.white, for: .selected)
             button.addTarget(self, action: #selector(selectDay(_:)), for: .touchUpInside)
-            buttons.append(button)
+            
+            buttonDays.append(button)
         }
         
-        stackView = UIStackView(arrangedSubviews: buttons)
+        stackView = UIStackView(arrangedSubviews: buttonDays)
         stackView.spacing = 8
         stackView.axis = .horizontal
         stackView.alignment = .center
@@ -92,23 +75,20 @@ class WeekDayPicker: UIControl {
     }
     
     private func updateSelectedDay() {
-        for (index, button) in buttons.enumerated() {
-            guard let day = Day(rawValue: index) else { continue }
-            button.isSelected = day == selectedDay
+        for (index, button) in buttonDays.enumerated() {
+            button.isSelected = weekDays[index] == selectedDay
         }
     }
     
-    private func currentDay() -> Day? {
+    private func currentDay() -> String? {
         if let number = dayOfWeek() {
-            return Day(rawValue: number - 2)
+            return weekDays[number-1]
         }
         
         return nil
     }
     
     private func dayOfWeek() -> Int? {
-        let date = Date()
-        let calendar = Calendar.current
         let components = calendar.dateComponents([.weekday], from: date)
         let day = components.weekday
         

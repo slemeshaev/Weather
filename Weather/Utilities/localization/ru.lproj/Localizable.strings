@@ -14,12 +14,3 @@
 
 // MARK: - Add City
 "AddCity.Header.Title" = "Добавить город";
-
-// MARK: - WeekDayPicker
-"WeekDayPicker.Monday" = "ПН";
-"WeekDayPicker.Tuesday" = "ВТ";
-"WeekDayPicker.Wednesday" = "СР";
-"WeekDayPicker.Thursday" = "ЧТ";
-"WeekDayPicker.Friday" = "ПТ";
-"WeekDayPicker.Saturday" = "СБ";
-"WeekDayPicker.Sunday" = "ВС";

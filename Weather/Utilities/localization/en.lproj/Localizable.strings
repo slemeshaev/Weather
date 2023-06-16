@@ -14,12 +14,3 @@
 
 // MARK: - Add City
 "AddCity.Header.Title" = "Add City";
-
-// MARK: - WeekDayPicker
-"WeekDayPicker.Monday" = "Mon";
-"WeekDayPicker.Tuesday" = "Tue";
-"WeekDayPicker.Wednesday" = "Wed";
-"WeekDayPicker.Thursday" = "Thu";
-"WeekDayPicker.Friday" = "Fri";
-"WeekDayPicker.Saturday" = "Sat";
-"WeekDayPicker.Sunday" = "Sun";
