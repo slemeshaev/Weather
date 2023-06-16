@@ -9,5 +9,17 @@
 "Login.Failure.Message" = "Your credentials are incorrect!";
 "Login.Failure.Cancel" = "Cancel";
 
+// MARK: - City List
+"CityList.Header.Title" = "City List";
+
 // MARK: - Add City
 "AddCity.Header.Title" = "Add City";
+
+// MARK: - WeekDayPicker
+"WeekDayPicker.Monday" = "Mon";
+"WeekDayPicker.Tuesday" = "Tue";
+"WeekDayPicker.Wednesday" = "Wed";
+"WeekDayPicker.Thursday" = "Thu";
+"WeekDayPicker.Friday" = "Fri";
+"WeekDayPicker.Saturday" = "Sat";
+"WeekDayPicker.Sunday" = "Sun";

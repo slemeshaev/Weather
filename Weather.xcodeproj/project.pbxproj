@@ -35,6 +35,7 @@
 		66CDC4442A229864006E1B58 /* AddCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CDC4432A229864006E1B58 /* AddCityViewController.swift */; };
 		66CDC4462A2298C1006E1B58 /* AddCityViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66CDC4452A2298C1006E1B58 /* AddCityViewController.storyboard */; };
 		66DEA9DD2A3253D9007176F3 /* AddCityHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DEA9DC2A3253D9007176F3 /* AddCityHeaderView.swift */; };
+		66F37E9D2A3CB66F00C6C935 /* WeekDayPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F37E9C2A3CB66F00C6C935 /* WeekDayPicker.swift */; };
 		66FE7F7D2A0E86580052D23E /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FE7F7C2A0E86580052D23E /* String+Localization.swift */; };
 		66FE7F7E2A0E86F10052D23E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66FE7F802A0E86F10052D23E /* Localizable.strings */; };
 		66FE7F882A0E8E820052D23E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66FE7F872A0E8E820052D23E /* Colors.xcassets */; };
@@ -71,6 +72,7 @@
 		66CDC4432A229864006E1B58 /* AddCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewController.swift; sourceTree = "<group>"; };
 		66CDC4452A2298C1006E1B58 /* AddCityViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddCityViewController.storyboard; sourceTree = "<group>"; };
 		66DEA9DC2A3253D9007176F3 /* AddCityHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityHeaderView.swift; sourceTree = "<group>"; };
+		66F37E9C2A3CB66F00C6C935 /* WeekDayPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDayPicker.swift; sourceTree = "<group>"; };
 		66FE7F7C2A0E86580052D23E /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		66FE7F7F2A0E86F10052D23E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		66FE7F812A0E87540052D23E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				669578AF2A3B94F000FDCD7A /* GradientView.swift */,
+				66F37E9C2A3CB66F00C6C935 /* WeekDayPicker.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				669578B02A3B94F000FDCD7A /* GradientView.swift in Sources */,
 				664F195E28FC191A006B09FB /* LoginViewController.swift in Sources */,
 				66CDC4442A229864006E1B58 /* AddCityViewController.swift in Sources */,
+				66F37E9D2A3CB66F00C6C935 /* WeekDayPicker.swift in Sources */,
 				66C655592A38EFEC001CFF8E /* ForecastCollectionViewCell.swift in Sources */,
 				66C6555C2A38F196001CFF8E /* Weather.swift in Sources */,
 				663B00C82A10018200922DE5 /* Colors.swift in Sources */,

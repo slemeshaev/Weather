@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rjz-1y-OQy">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="115" width="393" height="737"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" sectionInsetReference="safeArea" id="vIH-KT-Tqf">
                                     <size key="itemSize" width="140" height="140"/>
@@ -77,14 +77,23 @@
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="6xh-ec-9A6"/>
                                 </connections>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tKC-Lq-Emm" customClass="WeekDayPicker" customModule="Weather" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="59" width="393" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="rXw-Bn-vcu"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="rjz-1y-OQy" secondAttribute="bottom" id="QjX-gT-OQ3"/>
                             <constraint firstItem="rjz-1y-OQy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="TLY-KZ-KzC"/>
                             <constraint firstItem="rjz-1y-OQy" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Ten-Qa-wlA"/>
-                            <constraint firstItem="rjz-1y-OQy" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="ifn-Ax-u5m"/>
+                            <constraint firstItem="rjz-1y-OQy" firstAttribute="top" secondItem="tKC-Lq-Emm" secondAttribute="bottom" id="YEa-D3-Vqy"/>
+                            <constraint firstItem="tKC-Lq-Emm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="geh-nD-NNt"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tKC-Lq-Emm" secondAttribute="trailing" id="lhS-1C-0eQ"/>
+                            <constraint firstItem="tKC-Lq-Emm" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="uKg-VA-X2O"/>
+                            <constraint firstAttribute="bottom" secondItem="rjz-1y-OQy" secondAttribute="bottom" id="yVT-1Z-yC4"/>
                         </constraints>
                     </view>
                     <connections>
@@ -93,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="83.206106870229007" y="0.0"/>
+            <point key="canvasLocation" x="250" y="-35"/>
         </scene>
     </scenes>
     <resources>

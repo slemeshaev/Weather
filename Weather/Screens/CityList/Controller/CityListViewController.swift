@@ -54,7 +54,7 @@ class CityListViewController: UIViewController {
     
     private func configureUI() {
         cityList = createCityList()
-        configureNavigationBarWithTitle("City List")
+        configureNavigationBarWithTitle("CityList.Header.Title".localized)
         
         let item = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addCityTapped))
         navigationItem.rightBarButtonItem = item

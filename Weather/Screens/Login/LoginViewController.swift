@@ -43,6 +43,10 @@ class LoginViewController: UIViewController {
         removeObservers()
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     // MARK: - IBActions
     @IBAction private func signInButtonTapped(_ sender: UIButton) {
         if isValidateCredentials() {
