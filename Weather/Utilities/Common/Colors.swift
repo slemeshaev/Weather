@@ -29,6 +29,18 @@ struct Color {
         }
     }
     
+    // MARK: - ContentSecondary
+    struct ContentSecondary {
+        private init() {}
+        
+        // MARK: - Text
+        struct Text {
+            private init() {}
+            
+            static var title: UIColor { "w.content.secondary.text.title".uiColor }
+        }
+    }
+    
     // MARK: - GradientPrimary
     struct GradientPrimary {
         private init() {}

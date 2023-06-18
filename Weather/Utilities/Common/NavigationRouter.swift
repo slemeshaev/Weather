@@ -49,17 +49,17 @@ extension NavigationRouter: CityListViewControllerDelegate {
         let addCityViewController = AddCityViewController.loadFromStoryboard()
         addCityViewController.delegate = self
         
-        navigationController.present(addCityViewController, animated: true)
+        navigationController.pushViewController(addCityViewController, animated: true)
     }
 }
 
 // MARK: - AddCityViewControllerDelegate
 extension NavigationRouter: AddCityViewControllerDelegate {
     func addCityViewControllerDidSelect(city: City) {
+        navigationController.popViewController(animated: true)
+        
         if let cityListViewController = navigationController.viewControllers.last as? CityListViewController {
             cityListViewController.updateTable(with: city)
         }
-        
-        navigationController.dismiss(animated: true)
     }
 }

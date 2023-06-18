@@ -31,6 +31,7 @@ class AddCityViewController: UIViewController {
     
     // MARK: - Private
     private func configureUI() {
+        configureNavigationBarWithTitle("AddCity.Header.Title".localized)
         cityList = createCityList()
     }
     
@@ -44,11 +45,6 @@ class AddCityViewController: UIViewController {
 
 // MARK: - UITableViewDataSource, UITableViewDelegate
 extension AddCityViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = AddCityHeaderView()
-        return headerView
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cityList.count
     }
