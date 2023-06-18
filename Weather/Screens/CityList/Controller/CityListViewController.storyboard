@@ -16,13 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cUG-74-dea">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cUG-74-dea">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CityListCell" rowHeight="70" id="GDJ-gV-hva" customClass="CityListViewCell" customModule="Weather" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="70"/>
-                                        <autoresizingMask key="autoresizingMask"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GDJ-gV-hva" id="TzR-dk-rE8">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
@@ -37,19 +37,16 @@
                                                     <rect key="frame" x="20" y="5" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="375-er-F36"/>
-                                                        <constraint firstAttribute="height" constant="60" id="gqx-Fg-gjq"/>
+                                                        <constraint firstAttribute="height" constant="60" id="apd-2d-yg7"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="27o-dh-aXQ" firstAttribute="centerY" secondItem="TzR-dk-rE8" secondAttribute="centerY" id="CYM-sY-bsN"/>
                                                 <constraint firstItem="27o-dh-aXQ" firstAttribute="leading" secondItem="LFj-PU-7Wo" secondAttribute="trailing" constant="8" symbolic="YES" id="DZw-gS-VOO"/>
-                                                <constraint firstItem="LFj-PU-7Wo" firstAttribute="centerY" secondItem="TzR-dk-rE8" secondAttribute="centerY" id="KAW-qH-ZTy"/>
                                                 <constraint firstItem="LFj-PU-7Wo" firstAttribute="top" secondItem="TzR-dk-rE8" secondAttribute="top" constant="5" id="MYG-fc-qel"/>
-                                                <constraint firstItem="27o-dh-aXQ" firstAttribute="top" secondItem="TzR-dk-rE8" secondAttribute="topMargin" constant="12" id="Ohp-Bo-wTy"/>
                                                 <constraint firstItem="LFj-PU-7Wo" firstAttribute="leading" secondItem="TzR-dk-rE8" secondAttribute="leading" constant="20" symbolic="YES" id="Ugf-av-Php"/>
                                                 <constraint firstAttribute="bottom" secondItem="LFj-PU-7Wo" secondAttribute="bottom" constant="5" id="aI8-fU-AjH"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="27o-dh-aXQ" secondAttribute="bottom" constant="12" id="hOg-3m-miu"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
