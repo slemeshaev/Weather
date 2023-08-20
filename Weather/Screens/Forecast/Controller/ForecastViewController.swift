@@ -16,9 +16,7 @@ class ForecastViewController: UIViewController {
     
     // MARK: - Properties
     var city: City?
-    var weather: Weather? = Weather(temperature: "30°C",
-                                    icon: "noImage",
-                                    date: "13.06.2023")
+    var weather: Weather? = Weather(temperature: "-29°C", icon: "rainy", date: "20.08.2023 06:00")
     
     // MARK: - Lifecycle
     override func viewDidLoad() {

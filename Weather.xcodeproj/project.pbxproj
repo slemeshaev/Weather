@@ -230,8 +230,8 @@
 		66C655512A38DC4C001CFF8E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				66C655542A38DD15001CFF8E /* ForecastViewController.swift */,
 				66C655522A38DCE8001CFF8E /* ForecastViewController.storyboard */,
+				66C655542A38DD15001CFF8E /* ForecastViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
