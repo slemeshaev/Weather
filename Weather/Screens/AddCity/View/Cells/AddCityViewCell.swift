@@ -12,14 +12,14 @@ class AddCityViewCell: UITableViewCell {
     // MARK: - Properties
     @IBOutlet private weak var iconView: UIImageView! {
         didSet {
-            iconView.layer.borderColor = Color.ContentSecondary.Text.title.cgColor
+            iconView.layer.borderColor = Color.ContentPrimary.background.cgColor
             iconView.layer.borderWidth = 2
         }
     }
     
     @IBOutlet private weak var titleLabel: UILabel! {
         didSet {
-            titleLabel.textColor = Color.ContentSecondary.Text.title
+            titleLabel.textColor = Color.ContentPrimary.Text.text
         }
     }
     

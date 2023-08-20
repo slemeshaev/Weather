@@ -55,7 +55,7 @@ extension NavigationRouter: CityListViewControllerDelegate {
 
 // MARK: - AddCityViewControllerDelegate
 extension NavigationRouter: AddCityViewControllerDelegate {
-    func addCityViewControllerDidSelect(city: City) {
+    func addCityViewControllerDidSelect(_ city: City) {
         navigationController.popViewController(animated: true)
         
         if let cityListViewController = navigationController.viewControllers.last as? CityListViewController {

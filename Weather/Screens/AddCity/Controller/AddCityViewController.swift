@@ -9,7 +9,7 @@
 import UIKit
 
 protocol AddCityViewControllerDelegate: AnyObject {
-    func addCityViewControllerDidSelect(city: City)
+    func addCityViewControllerDidSelect(_ city: City)
 }
 
 class AddCityViewController: UIViewController {
@@ -51,7 +51,7 @@ extension AddCityViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let city = cityList.cityAtIndex(index: indexPath.row) else { return }
-        delegate?.addCityViewControllerDidSelect(city: city)
+        delegate?.addCityViewControllerDidSelect(city)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     

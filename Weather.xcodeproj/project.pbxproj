@@ -319,8 +319,8 @@
 		66CDC4472A2298CD006E1B58 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				66CDC4432A229864006E1B58 /* AddCityViewController.swift */,
 				66CDC4452A2298C1006E1B58 /* AddCityViewController.storyboard */,
+				66CDC4432A229864006E1B58 /* AddCityViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

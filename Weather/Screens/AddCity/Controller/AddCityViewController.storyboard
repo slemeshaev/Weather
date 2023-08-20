@@ -36,7 +36,7 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1sd-Zj-MNq">
                                                     <rect key="frame" x="20" y="5" width="60" height="60"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="60" id="8Ip-bb-Vol"/>
+                                                        <constraint firstAttribute="height" constant="60" id="BRW-FY-0gU"/>
                                                         <constraint firstAttribute="width" constant="60" id="PN5-BV-XjF"/>
                                                     </constraints>
                                                 </imageView>
@@ -47,9 +47,7 @@
                                                 <constraint firstItem="Nor-Dq-yHf" firstAttribute="top" secondItem="Zm7-Dq-O9O" secondAttribute="topMargin" constant="12" id="L3L-18-uah"/>
                                                 <constraint firstItem="1sd-Zj-MNq" firstAttribute="leading" secondItem="Zm7-Dq-O9O" secondAttribute="leading" constant="20" symbolic="YES" id="WUK-gv-S8e"/>
                                                 <constraint firstItem="Nor-Dq-yHf" firstAttribute="leading" secondItem="1sd-Zj-MNq" secondAttribute="trailing" constant="8" symbolic="YES" id="XPI-0M-O1Z"/>
-                                                <constraint firstAttribute="bottom" secondItem="1sd-Zj-MNq" secondAttribute="bottom" constant="5" id="mdt-Bk-N6V"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Nor-Dq-yHf" secondAttribute="bottom" constant="12" id="pUE-wO-eY1"/>
-                                                <constraint firstItem="1sd-Zj-MNq" firstAttribute="top" secondItem="Zm7-Dq-O9O" secondAttribute="top" constant="5" id="vEm-XR-Af7"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
