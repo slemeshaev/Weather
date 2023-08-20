@@ -11,12 +11,14 @@ import UIKit
 class ForecastViewController: UIViewController {
     private let reuseId = "ForecastCell"
     
-    // MARK: - Properties
-    var city: City?
-    var weather: Weather? = Weather(temperature: "30°C", icon: "noImage", date: "13.06.2023")
-    
     // MARK: - IBOutlets
     @IBOutlet private weak var collectionView: UICollectionView!
+    
+    // MARK: - Properties
+    var city: City?
+    var weather: Weather? = Weather(temperature: "30°C",
+                                    icon: "noImage",
+                                    date: "13.06.2023")
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
