@@ -64,7 +64,6 @@ class WeekDayPicker: UIControl {
         }
         
         stackView = UIStackView(arrangedSubviews: buttonDays)
-        stackView.spacing = 8
         stackView.axis = .horizontal
         stackView.alignment = .center
         stackView.distribution = .fillEqually
