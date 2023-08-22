@@ -33,7 +33,7 @@ class ForecastCollectionViewCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         shadowView.layer.shadowPath = UIBezierPath(ovalIn: shadowView.bounds).cgPath
-        containerView.layer.cornerRadius = containerView.frame.width / 2
+        containerView.layer.cornerRadius = containerView.bounds.width / 2
     }
     
     // MARK: - Interface
