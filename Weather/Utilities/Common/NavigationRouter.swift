@@ -38,6 +38,13 @@ extension NavigationRouter: LoginViewControllerDelegate {
 
 // MARK: - CityListViewControllerDelegate
 extension NavigationRouter: CityListViewControllerDelegate {
+    func cityListViewControllerAddCityTapped() {
+        let addCityViewController = AddCityViewController.loadFromStoryboard()
+        addCityViewController.delegate = self
+        
+        navigationController.pushViewController(addCityViewController, animated: true)
+    }
+    
     func cityListViewControllerForecastFor(city: City) {
         let forecastViewController = ForecastViewController.loadFromStoryboard()
         forecastViewController.city = city
@@ -45,11 +52,8 @@ extension NavigationRouter: CityListViewControllerDelegate {
         navigationController.pushViewController(forecastViewController, animated: true)
     }
     
-    func cityListViewControllerAddCityTapped() {
-        let addCityViewController = AddCityViewController.loadFromStoryboard()
-        addCityViewController.delegate = self
-        
-        navigationController.pushViewController(addCityViewController, animated: true)
+    func cityListViewControllerLogOutTapped() {
+        navigationController.popToRootViewController(animated: true)
     }
 }
 

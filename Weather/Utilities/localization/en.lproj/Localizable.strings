@@ -11,6 +11,7 @@
 
 // MARK: - City List
 "CityList.Header.Title" = "City List";
+"CityList.Header.LogOut" = "Log out";
 
 // MARK: - Add City
 "AddCity.Header.Title" = "Add City";

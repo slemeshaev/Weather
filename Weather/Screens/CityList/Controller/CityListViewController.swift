@@ -10,6 +10,7 @@ import UIKit
 
 protocol CityListViewControllerDelegate: AnyObject {
     func cityListViewControllerAddCityTapped()
+    func cityListViewControllerLogOutTapped()
     func cityListViewControllerForecastFor(city: City)
 }
 
@@ -28,11 +29,6 @@ class CityListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-    }
-    
-    // MARK: - Actions
-    @objc private func addCityTapped() {
-        delegate?.cityListViewControllerAddCityTapped()
     }
     
     // MARK: - Interface
@@ -56,8 +52,27 @@ class CityListViewController: UIViewController {
         cityList = createCityList()
         configureNavigationBarWithTitle("CityList.Header.Title".localized)
         
-        let item = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addCityTapped))
-        navigationItem.rightBarButtonItem = item
+        let addItem = UIBarButtonItem(
+            barButtonSystemItem: .add,
+            target: self,
+            action: #selector(addCityTapped))
+        navigationItem.rightBarButtonItem = addItem
+        
+        let logOutItem = UIBarButtonItem(
+            title: "CityList.Header.LogOut".localized,
+            style: .plain,
+            target: self,
+            action: #selector(logOutTapped))
+        navigationItem.leftBarButtonItem = logOutItem
+    }
+    
+    // MARK: - Actions
+    @objc private func addCityTapped() {
+        delegate?.cityListViewControllerAddCityTapped()
+    }
+    
+    @objc private func logOutTapped() {
+        delegate?.cityListViewControllerLogOutTapped()
     }
 }
 
