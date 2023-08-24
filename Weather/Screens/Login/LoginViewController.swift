@@ -29,6 +29,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        animateUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -161,5 +162,68 @@ class LoginViewController: UIViewController {
         
         let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         scrollView?.addGestureRecognizer(hideKeyboardGesture)
+    }
+    
+    private func animateUI() {
+        let offsetY = view.bounds.height
+        let transformY = CGAffineTransform(translationX: 0, y: offsetY)
+        
+        usernameTextField.transform = transformY
+        passwordTextField.transform = transformY
+        signInButton.transform = transformY
+        signUpButton.transform = transformY
+        
+        UIView.animate(
+            withDuration: 1,
+            delay: 1,
+            options: .curveEaseOut,
+            animations: {
+                self.usernameTextField.transform = .identity
+                self.passwordTextField.transform = .identity
+                self.signInButton.transform = .identity
+                self.signUpButton.transform = .identity
+            },
+            completion: nil
+        )
+        
+        let offsetX = view.bounds.width
+        logoImageView.transform = CGAffineTransform(translationX: -offsetX, y: 0)
+        titleLabel.transform = CGAffineTransform(translationX: offsetX, y: 0)
+        
+        UIView.animate(
+            withDuration: 1,
+            delay: 1,
+            usingSpringWithDamping: 0.5,
+            initialSpringVelocity: 0,
+            options: .curveEaseOut,
+            animations: {
+                self.logoImageView.transform = .identity
+                self.titleLabel.transform = .identity
+            },
+            completion: nil
+        )
+        
+        let fadeInAnimation = CABasicAnimation(keyPath: "opacity")
+        fadeInAnimation.fromValue = 0
+        fadeInAnimation.toValue = 1
+        fadeInAnimation.duration = 1
+        fadeInAnimation.beginTime = CACurrentMediaTime() + 1
+        fadeInAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+        fadeInAnimation.fillMode = CAMediaTimingFillMode.backwards
+        
+        usernameTextField.layer.add(fadeInAnimation, forKey: nil)
+        passwordTextField.layer.add(fadeInAnimation, forKey: nil)
+        
+        let transformAnimation = CASpringAnimation(keyPath: "transform.scale")
+        transformAnimation.fromValue = 0
+        transformAnimation.toValue = 1
+        transformAnimation.stiffness = 200
+        transformAnimation.mass = 2
+        transformAnimation.duration = 2
+        transformAnimation.beginTime = CACurrentMediaTime() + 1
+        transformAnimation.fillMode = CAMediaTimingFillMode.backwards
+        
+        signInButton.layer.add(transformAnimation, forKey: nil)
+        signUpButton.layer.add(transformAnimation, forKey: nil)
     }
 }
