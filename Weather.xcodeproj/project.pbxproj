@@ -12,6 +12,8 @@
 		6620A9882A0A54BE0082718F /* CityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6620A9872A0A54BE0082718F /* CityListViewController.swift */; };
 		6620A98A2A0A5C780082718F /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6620A9892A0A5C780082718F /* NavigationRouter.swift */; };
 		6620A98C2A0A6FC70082718F /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6620A98B2A0A6FC70082718F /* UIViewController.swift */; };
+		662323192A9B4D00007EA1C8 /* NavigationPopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662323182A9B4D00007EA1C8 /* NavigationPopAnimator.swift */; };
+		6623231B2A9B50DE007EA1C8 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6623231A2A9B50DE007EA1C8 /* NavigationController.swift */; };
 		663B00C82A10018200922DE5 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663B00C72A10018200922DE5 /* Colors.swift */; };
 		663B00CA2A1002DA00922DE5 /* String+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663B00C92A1002DA00922DE5 /* String+Color.swift */; };
 		664F195A28FC18CE006B09FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 664F195828FC18CE006B09FB /* LaunchScreen.storyboard */; };
@@ -49,6 +51,8 @@
 		6620A9872A0A54BE0082718F /* CityListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListViewController.swift; sourceTree = "<group>"; };
 		6620A9892A0A5C780082718F /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
 		6620A98B2A0A6FC70082718F /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		662323182A9B4D00007EA1C8 /* NavigationPopAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPopAnimator.swift; sourceTree = "<group>"; };
+		6623231A2A9B50DE007EA1C8 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		663B00C72A10018200922DE5 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		663B00C92A1002DA00922DE5 /* String+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Color.swift"; sourceTree = "<group>"; };
 		664F195928FC18CE006B09FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -369,7 +373,9 @@
 			children = (
 				663B00C72A10018200922DE5 /* Colors.swift */,
 				6620A9892A0A5C780082718F /* NavigationRouter.swift */,
+				6623231A2A9B50DE007EA1C8 /* NavigationController.swift */,
 				66BEF7322A9A655100180757 /* NavigationPushAnimator.swift */,
+				662323182A9B4D00007EA1C8 /* NavigationPopAnimator.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -483,8 +489,10 @@
 				6620A9882A0A54BE0082718F /* CityListViewController.swift in Sources */,
 				6620A98C2A0A6FC70082718F /* UIViewController.swift in Sources */,
 				66C9E3A328FC173E00CD1D24 /* AppDelegate.swift in Sources */,
+				662323192A9B4D00007EA1C8 /* NavigationPopAnimator.swift in Sources */,
 				66BEF7332A9A655100180757 /* NavigationPushAnimator.swift in Sources */,
 				663B00CA2A1002DA00922DE5 /* String+Color.swift in Sources */,
+				6623231B2A9B50DE007EA1C8 /* NavigationController.swift in Sources */,
 				6657B2152A10D022008F9CD7 /* City.swift in Sources */,
 				6620A98A2A0A5C780082718F /* NavigationRouter.swift in Sources */,
 				66DEA9DD2A3253D9007176F3 /* AddCityHeaderView.swift in Sources */,

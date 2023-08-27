@@ -10,12 +10,12 @@ import UIKit
 
 class NavigationRouter {
     // MARK: - Init
-    init(navigationController: UINavigationController) {
+    init(navigationController: NavigationController) {
         self.navigationController = navigationController
     }
     
     // MARK: - Properties
-    let navigationController: UINavigationController
+    let navigationController: NavigationController
     
     // MARK: - Interface
     func start() {
