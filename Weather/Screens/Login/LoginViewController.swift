@@ -10,6 +10,7 @@ import UIKit
 
 protocol LoginViewControllerDelegate: AnyObject {
     func loginViewControllerSignInTapped()
+    func loginViewControllerSignUpTapped()
 }
 
 class LoginViewController: UIViewController {
@@ -59,7 +60,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction private func signUpButtonTapped(_ sender: UIButton) {
-        print(#function)
+        delegate?.loginViewControllerSignUpTapped()
     }
     
     // MARK: - Actions
