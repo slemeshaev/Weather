@@ -24,6 +24,7 @@
 		6657B21C2A10DBF3008F9CD7 /* CityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6657B21B2A10DBF3008F9CD7 /* CityList.swift */; };
 		6657B21E2A10E4C6008F9CD7 /* CityListViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6657B21D2A10E4C6008F9CD7 /* CityListViewCellModel.swift */; };
 		6657B2212A10E7CD008F9CD7 /* CityListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6657B2202A10E7CD008F9CD7 /* CityListViewCell.swift */; };
+		6679CEEE2B6D5CC200661A9F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6679CEEB2B6D5CC200661A9F /* Localizable.strings */; };
 		6692AB212A2E6E3C00EA1F27 /* AddCityViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6692AB202A2E6E3C00EA1F27 /* AddCityViewCellModel.swift */; };
 		6692AB252A2E6EDC00EA1F27 /* AddCityViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6692AB242A2E6EDC00EA1F27 /* AddCityViewCell.swift */; };
 		669578B02A3B94F000FDCD7A /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669578AF2A3B94F000FDCD7A /* GradientView.swift */; };
@@ -42,7 +43,6 @@
 		66DEA9DD2A3253D9007176F3 /* AddCityHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DEA9DC2A3253D9007176F3 /* AddCityHeaderView.swift */; };
 		66F37E9D2A3CB66F00C6C935 /* WeekDayPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F37E9C2A3CB66F00C6C935 /* WeekDayPicker.swift */; };
 		66FE7F7D2A0E86580052D23E /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FE7F7C2A0E86580052D23E /* String+Localization.swift */; };
-		66FE7F7E2A0E86F10052D23E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66FE7F802A0E86F10052D23E /* Localizable.strings */; };
 		66FE7F882A0E8E820052D23E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66FE7F872A0E8E820052D23E /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +64,8 @@
 		6657B21B2A10DBF3008F9CD7 /* CityList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityList.swift; sourceTree = "<group>"; };
 		6657B21D2A10E4C6008F9CD7 /* CityListViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListViewCellModel.swift; sourceTree = "<group>"; };
 		6657B2202A10E7CD008F9CD7 /* CityListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListViewCell.swift; sourceTree = "<group>"; };
+		6679CEEC2B6D5CC200661A9F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6679CEED2B6D5CC200661A9F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6692AB202A2E6E3C00EA1F27 /* AddCityViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewCellModel.swift; sourceTree = "<group>"; };
 		6692AB242A2E6EDC00EA1F27 /* AddCityViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewCell.swift; sourceTree = "<group>"; };
 		669578AF2A3B94F000FDCD7A /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -84,8 +86,6 @@
 		66DEA9DC2A3253D9007176F3 /* AddCityHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityHeaderView.swift; sourceTree = "<group>"; };
 		66F37E9C2A3CB66F00C6C935 /* WeekDayPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDayPicker.swift; sourceTree = "<group>"; };
 		66FE7F7C2A0E86580052D23E /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
-		66FE7F7F2A0E86F10052D23E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		66FE7F812A0E87540052D23E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		66FE7F872A0E8E820052D23E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Colors.xcassets; path = Weather/Utilities/Colors.xcassets; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -137,8 +137,8 @@
 				669578AE2A3B942E00FDCD7A /* Components */,
 				66FE7F842A0E88FF0052D23E /* Common */,
 				66FE7F852A0E890F0052D23E /* Config */,
+				6679CEEA2B6D5CC200661A9F /* Localization */,
 				66FE7F832A0E88AA0052D23E /* Extensions */,
-				66FE7F822A0E88990052D23E /* Localization */,
 				66FE7F862A0E89330052D23E /* Resources */,
 			);
 			path = Utilities;
@@ -202,6 +202,15 @@
 			);
 			path = Cells;
 			sourceTree = "<group>";
+		};
+		6679CEEA2B6D5CC200661A9F /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				6679CEEB2B6D5CC200661A9F /* Localizable.strings */,
+			);
+			name = Localization;
+			path = Weather/Utilities/Localization;
+			sourceTree = SOURCE_ROOT;
 		};
 		6692AB1C2A2E6D8000EA1F27 /* Models */ = {
 			isa = PBXGroup;
@@ -363,14 +372,6 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
-		66FE7F822A0E88990052D23E /* Localization */ = {
-			isa = PBXGroup;
-			children = (
-				66FE7F802A0E86F10052D23E /* Localizable.strings */,
-			);
-			path = Localization;
-			sourceTree = "<group>";
-		};
 		66FE7F832A0E88AA0052D23E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -473,8 +474,8 @@
 				669A50E82A02E8F600989404 /* Common.xcassets in Resources */,
 				66C655532A38DCE8001CFF8E /* ForecastViewController.storyboard in Resources */,
 				664F195A28FC18CE006B09FB /* LaunchScreen.storyboard in Resources */,
+				6679CEEE2B6D5CC200661A9F /* Localizable.strings in Resources */,
 				6620A9862A0A54730082718F /* CityListViewController.storyboard in Resources */,
-				66FE7F7E2A0E86F10052D23E /* Localizable.strings in Resources */,
 				66C9E3AC28FC174000CD1D24 /* AppIcon.xcassets in Resources */,
 				664F195C28FC1901006B09FB /* LoginViewController.storyboard in Resources */,
 				66FE7F882A0E8E820052D23E /* Colors.xcassets in Resources */,
@@ -530,11 +531,11 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		66FE7F802A0E86F10052D23E /* Localizable.strings */ = {
+		6679CEEB2B6D5CC200661A9F /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				66FE7F7F2A0E86F10052D23E /* en */,
-				66FE7F812A0E87540052D23E /* ru */,
+				6679CEEC2B6D5CC200661A9F /* en */,
+				6679CEED2B6D5CC200661A9F /* ru */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

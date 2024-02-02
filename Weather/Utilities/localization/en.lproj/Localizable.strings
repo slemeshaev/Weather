@@ -8,6 +8,9 @@
 "Login.Failure.Title" = "Try that again";
 "Login.Failure.Message" = "Your credentials are incorrect!";
 "Login.Failure.Cancel" = "Cancel";
+"Login.SignUp.Title" = "Sorry!";
+"Login.SignUp.Message" = "The Sign Up screen isn't implemented now!";
+"Login.SignUp.Cancel" = "Cancel";
 
 // MARK: - City List
 "CityList.Header.Title" = "City List";

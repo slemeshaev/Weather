@@ -8,6 +8,9 @@
 "Login.Failure.Title" = "Попробуйте еще раз";
 "Login.Failure.Message" = "Ваши учетные данные неверны!";
 "Login.Failure.Cancel" = "Отмена";
+"Login.SignUp.Title" = "Извините!";
+"Login.SignUp.Message" = "Экран регистрации пока не реализован!";
+"Login.SignUp.Cancel" = "Отмена";
 
 // MARK: - City List
 "CityList.Header.Title" = "Список городов";
