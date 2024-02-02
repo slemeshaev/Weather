@@ -40,8 +40,6 @@
 		66CDC4442A229864006E1B58 /* AddCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CDC4432A229864006E1B58 /* AddCityViewController.swift */; };
 		66CDC4462A2298C1006E1B58 /* AddCityViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66CDC4452A2298C1006E1B58 /* AddCityViewController.storyboard */; };
 		66DEA9DD2A3253D9007176F3 /* AddCityHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DEA9DC2A3253D9007176F3 /* AddCityHeaderView.swift */; };
-		66E43C082A9E6CCF00AA08C0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E43C072A9E6CCF00AA08C0 /* SignUpViewController.swift */; };
-		66E43C092A9E715800AA08C0 /* SignUpViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66E43C062A9E69BE00AA08C0 /* SignUpViewController.storyboard */; };
 		66F37E9D2A3CB66F00C6C935 /* WeekDayPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F37E9C2A3CB66F00C6C935 /* WeekDayPicker.swift */; };
 		66FE7F7D2A0E86580052D23E /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FE7F7C2A0E86580052D23E /* String+Localization.swift */; };
 		66FE7F7E2A0E86F10052D23E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66FE7F802A0E86F10052D23E /* Localizable.strings */; };
@@ -84,8 +82,6 @@
 		66CDC4432A229864006E1B58 /* AddCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewController.swift; sourceTree = "<group>"; };
 		66CDC4452A2298C1006E1B58 /* AddCityViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddCityViewController.storyboard; sourceTree = "<group>"; };
 		66DEA9DC2A3253D9007176F3 /* AddCityHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityHeaderView.swift; sourceTree = "<group>"; };
-		66E43C062A9E69BE00AA08C0 /* SignUpViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpViewController.storyboard; sourceTree = "<group>"; };
-		66E43C072A9E6CCF00AA08C0 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = Weather/Screens/SignUp/SignUpViewController.swift; sourceTree = SOURCE_ROOT; };
 		66F37E9C2A3CB66F00C6C935 /* WeekDayPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDayPicker.swift; sourceTree = "<group>"; };
 		66FE7F7C2A0E86580052D23E /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		66FE7F7F2A0E86F10052D23E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -333,7 +329,6 @@
 			children = (
 				664F195728FC18CE006B09FB /* Launch */,
 				664F195528FC1881006B09FB /* Login */,
-				66E43C052A9E693C00AA08C0 /* SignUp */,
 				6620A9842A0A54210082718F /* CityList */,
 				66CDC4422A2297AA006E1B58 /* AddCity */,
 				66C655502A38DB95001CFF8E /* Forecast */,
@@ -366,15 +361,6 @@
 				66DEA9DC2A3253D9007176F3 /* AddCityHeaderView.swift */,
 			);
 			path = Header;
-			sourceTree = "<group>";
-		};
-		66E43C052A9E693C00AA08C0 /* SignUp */ = {
-			isa = PBXGroup;
-			children = (
-				66E43C062A9E69BE00AA08C0 /* SignUpViewController.storyboard */,
-				66E43C072A9E6CCF00AA08C0 /* SignUpViewController.swift */,
-			);
-			path = SignUp;
 			sourceTree = "<group>";
 		};
 		66FE7F822A0E88990052D23E /* Localization */ = {
@@ -484,7 +470,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				66CDC4462A2298C1006E1B58 /* AddCityViewController.storyboard in Resources */,
-				66E43C092A9E715800AA08C0 /* SignUpViewController.storyboard in Resources */,
 				669A50E82A02E8F600989404 /* Common.xcassets in Resources */,
 				66C655532A38DCE8001CFF8E /* ForecastViewController.storyboard in Resources */,
 				664F195A28FC18CE006B09FB /* LaunchScreen.storyboard in Resources */,
@@ -519,7 +504,6 @@
 				662323192A9B4D00007EA1C8 /* NavigationPopAnimator.swift in Sources */,
 				66BEF7332A9A655100180757 /* NavigationPushAnimator.swift in Sources */,
 				663B00CA2A1002DA00922DE5 /* String+Color.swift in Sources */,
-				66E43C082A9E6CCF00AA08C0 /* SignUpViewController.swift in Sources */,
 				6623231B2A9B50DE007EA1C8 /* NavigationController.swift in Sources */,
 				6657B2152A10D022008F9CD7 /* City.swift in Sources */,
 				6620A98A2A0A5C780082718F /* NavigationRouter.swift in Sources */,

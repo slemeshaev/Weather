@@ -10,7 +10,6 @@ import UIKit
 
 protocol LoginViewControllerDelegate: AnyObject {
     func loginViewControllerSignInTapped()
-    func loginViewControllerSignUpTapped()
 }
 
 class LoginViewController: UIViewController {
@@ -60,7 +59,13 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction private func signUpButtonTapped(_ sender: UIButton) {
-        delegate?.loginViewControllerSignUpTapped()
+        let alertController = UIAlertController(title: "Login.SignUp.Title".localized,
+                                                message: "Login.SignUp.Message".localized,
+                                                preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Login.SignUp.Cancel".localized, style: .cancel)
+        
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true)
     }
     
     // MARK: - Actions

@@ -34,12 +34,6 @@ extension NavigationRouter: LoginViewControllerDelegate {
         
         navigationController.pushViewController(cityListViewController, animated: true)
     }
-    
-    func loginViewControllerSignUpTapped() {
-        let signUpViewController = SignUpViewController.loadFromStoryboard()
-        
-        navigationController.pushViewController(signUpViewController, animated: true)
-    }
 }
 
 // MARK: - CityListViewControllerDelegate
