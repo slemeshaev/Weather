@@ -15,8 +15,11 @@ class ForecastViewController: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
     
     // MARK: - Properties
+    let dataFetcher = NetworkDataFetcher()
+    
     var city: City?
     var weather: Weather? = Weather(temperature: "-29°C", icon: "rainy", date: "20.08.2023 06:00")
+    
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -28,6 +31,9 @@ class ForecastViewController: UIViewController {
     private func configureUI() {
         if let city = city {
             configureNavigationBarWithTitle(city.name)
+            dataFetcher.fetchWeather(for: city.name) { (searchResults) in
+                guard let fetchedWeather = searchResults else { return }
+            }
         }
     }
 }
