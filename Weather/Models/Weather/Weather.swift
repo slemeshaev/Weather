@@ -8,10 +8,6 @@
 
 import Foundation
 
-struct WeatherResponse: Decodable {
-    let list: [Weather]
-}
-
 struct Weather: Decodable {
     let temperature: String
     let icon: String

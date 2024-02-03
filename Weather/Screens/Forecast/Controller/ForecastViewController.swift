@@ -31,8 +31,9 @@ class ForecastViewController: UIViewController {
     private func configureUI() {
         if let city = city {
             configureNavigationBarWithTitle(city.name)
-            dataFetcher.fetchWeather(for: city.name) { (searchResults) in
-                guard let fetchedWeather = searchResults else { return }
+            dataFetcher.fetchWeather(for: city.name) { (weatherResults) in
+                guard let fetchedWeather = weatherResults else { return }
+                print(fetchedWeather)
             }
         }
     }
