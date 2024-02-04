@@ -7,8 +7,8 @@
 //
 
 struct WeatherAPI {
-    static let scheme = "http"
+    static let scheme = "https"
     static let host = "api.openweathermap.org"
-    static let apiKey = "92cabe9523da26194b02974bfcd50b7e"
+    static let apiKey = "63dd98b5b2cefd676c84fee8f42baa66"
     static let path = "/data/2.5/forecast"
 }
