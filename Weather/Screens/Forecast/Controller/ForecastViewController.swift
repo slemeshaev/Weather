@@ -15,11 +15,10 @@ class ForecastViewController: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
     
     // MARK: - Properties
-    let dataFetcher = NetworkDataFetcher()
+    private let dataFetcher = NetworkDataFetcher()
+    private var weathers = [Weather]()
     
     var city: City?
-    var weather: Weather? = Weather(temperature: "-29°C", icon: "rainy", date: "20.08.2023 06:00")
-    
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -29,12 +28,17 @@ class ForecastViewController: UIViewController {
     
     // MARK: - Private
     private func configureUI() {
-        if let city = city {
-            configureNavigationBarWithTitle(city.name)
-            dataFetcher.fetchWeather(for: city.name) { (weatherResults) in
-                guard let fetchedWeather = weatherResults else { return }
-                print(fetchedWeather)
+        guard let city = city?.name else { return }
+        
+        configureNavigationBarWithTitle(city)
+        dataFetcher.fetchWeather(for: city) { (weatherResults) in
+            guard let fetchedWeather = weatherResults else { return }
+            
+            fetchedWeather.list.forEach { weather in
+                self.weathers.append(Weather(dto: weather))
             }
+            
+            self.collectionView.reloadData()
         }
     }
 }
@@ -42,7 +46,7 @@ class ForecastViewController: UIViewController {
 // MARK: - UICollectionViewDataSource
 extension ForecastViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 11
+        return weathers.count - 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -50,10 +54,10 @@ extension ForecastViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         
-        if let weather = weather {
-            let model = ForecastViewCellModel(weather: weather)
-            cell.configure(with: model)
-        }
+        let weather = weathers[indexPath.row]
+        let model = ForecastViewCellModel(weather: weather)
+        
+        cell.configure(with: model)
         
         return cell
     }

@@ -8,8 +8,17 @@
 
 import Foundation
 
-struct Weather: Decodable {
-    let temperature: String
+struct Weather: Codable {
     let icon: String
-    let date: String
+    let temperature: Double
+    let date: Date
+}
+
+// MARK: - Mappers
+extension Weather {
+    init(dto: WeatherListDto) {
+        self.icon = dto.weather.first?.icon ?? ""
+        self.temperature = dto.main.temp
+        self.date = dto.dt
+    }
 }
