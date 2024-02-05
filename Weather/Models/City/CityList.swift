@@ -10,25 +10,25 @@ import Foundation
 
 class CityList {
     // MARK: - Init
-    init(cityList: [City]) {
-        self.cityList = cityList
+    init(_ list: [City]) {
+        self.list = list
     }
     
     // MARK: - Properties
-    private var cityList: [City]
+    private var list: [City]
     
     var cities: [City] {
-        return cityList
+        return list
     }
     
     var count: Int {
-        return cityList.count
+        return list.count
     }
     
     // MARK: - Interface
     func addCity(city: City) {
         if !city.name.isEmpty {
-            cityList.append(city)
+            list.append(city)
         }
     }
     
@@ -37,16 +37,16 @@ class CityList {
             return nil
         }
         
-        return cityList[index]
+        return list[index]
     }
     
     func removeCity(city: City) {
-        if let index = cityList.firstIndex(of: city) {
-            cityList.remove(at: index)
+        if let index = list.firstIndex(of: city) {
+            list.remove(at: index)
         }
     }
     
     func hasCity(_ city: City) -> Bool {
-        return cityList.firstIndex(of: city) == nil
+        return list.firstIndex(of: city) == nil
     }
 }

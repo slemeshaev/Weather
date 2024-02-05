@@ -9,16 +9,19 @@
 import Foundation
 
 struct Weather: Codable {
+    // MARK: - Properties
     let icon: String
     let temperature: Double
     let date: Date
-}
-
-// MARK: - Mappers
-extension Weather {
-    init(dto: WeatherListDto) {
-        self.icon = dto.weather.first?.icon ?? ""
-        self.temperature = dto.main.temp
-        self.date = dto.dt
+    
+    // MARK: - Init
+    init(icon: String, temperature: Double, date: Date) {
+        self.icon = icon
+        self.temperature = temperature
+        self.date = date
+    }
+    
+    init() {
+        self.init(icon: String(), temperature: Double(), date: Date())
     }
 }

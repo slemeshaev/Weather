@@ -19,7 +19,7 @@ class AddCityViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Properties
-    private var cityList = CityList(cityList: [])
+    private var cityList = CityList([])
     
     weak var delegate: AddCityViewControllerDelegate?
     
@@ -39,7 +39,7 @@ class AddCityViewController: UIViewController {
         let volgograd = City(icon: "volgograd", name: "Volgograd")
         let belgorod = City(icon: "belgorod", name: "Belgorod")
         let khabarovsk = City(icon: "khabarovsk", name: "Khabarovsk")
-        return CityList(cityList: [volgograd, belgorod, khabarovsk])
+        return CityList([volgograd, belgorod, khabarovsk])
     }
 }
 

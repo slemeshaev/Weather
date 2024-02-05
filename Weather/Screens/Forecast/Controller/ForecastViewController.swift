@@ -16,7 +16,7 @@ class ForecastViewController: UIViewController {
     
     // MARK: - Properties
     private let dataFetcher = NetworkDataFetcher()
-    private var weathers = [Weather]()
+    private var weatherList = WeatherList([])
     
     var city: City?
     
@@ -32,12 +32,8 @@ class ForecastViewController: UIViewController {
         
         configureNavigationBarWithTitle(city)
         dataFetcher.fetchWeather(for: city) { (weatherResults) in
-            guard let fetchedWeather = weatherResults else { return }
-            
-            fetchedWeather.list.forEach { weather in
-                self.weathers.append(Weather(dto: weather))
-            }
-            
+            guard let fetchedWeathers = weatherResults else { return }
+            self.weatherList.addList(fetchedWeathers.list)
             self.collectionView.reloadData()
         }
     }
@@ -46,7 +42,7 @@ class ForecastViewController: UIViewController {
 // MARK: - UICollectionViewDataSource
 extension ForecastViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return weathers.count - 1
+        return weatherList.count - 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -54,9 +50,7 @@ extension ForecastViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         
-        let weather = weathers[indexPath.row]
-        let model = ForecastViewCellModel(weather: weather)
-        
+        let model = ForecastViewCellModel(list: weatherList)
         cell.configure(with: model)
         
         return cell
