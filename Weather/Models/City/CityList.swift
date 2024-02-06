@@ -33,7 +33,7 @@ class CityList {
     }
     
     func cityAtIndex(index: Int) -> City? {
-        if (index < 0 || index > cities.count - 1) {
+        if (index < 0 || index > count - 1) {
             return nil
         }
         

@@ -10,26 +10,18 @@ import UIKit
 
 struct ForecastViewCellModel {
     // MARK: - Init
-    init(list: WeatherList) {
-        self.weatherList = list
+    init(weather: Weather) {
+        self.weather = weather
     }
     
     // MARK: - Properties
-    private let weatherList: WeatherList
+    private let weather: Weather
     
     private let dateFormatter: DateFormatter = {
         let df = DateFormatter()
         df.dateFormat = "dd.MM.yyyy HH.mm"
         return df
     }()
-    
-    private var weather: Weather {
-        for value in weatherList.weathers {
-            return Weather(icon: value.icon, temperature: value.temperature, date: value.date)
-        }
-        
-        return Weather()
-    }
     
     var icon: String { weather.icon }
     var temperature: String { String(weather.temperature) }

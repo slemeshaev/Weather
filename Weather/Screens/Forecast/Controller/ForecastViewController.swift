@@ -50,7 +50,11 @@ extension ForecastViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         
-        let model = ForecastViewCellModel(list: weatherList)
+        guard let weather = weatherList.weatherAtIndex(index: indexPath.row) else {
+            return UICollectionViewCell()
+        }
+        
+        let model = ForecastViewCellModel(weather: weather)
         cell.configure(with: model)
         
         return cell

@@ -38,4 +38,12 @@ class WeatherList {
             addWeather(weather)
         }
     }
+    
+    func weatherAtIndex(index: Int) -> Weather? {
+        if (index < 0 || index > count - 1) {
+            return nil
+        }
+        
+        return list[index]
+    }
 }

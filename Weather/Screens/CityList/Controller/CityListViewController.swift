@@ -89,16 +89,15 @@ extension CityListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseId, for: indexPath) as? CityListViewCell else {
+            return UITableViewCell()
+        }
+        
         guard let city = cityList.cityAtIndex(index: indexPath.row) else {
             return UITableViewCell()
         }
         
         let cityListViewCellModel = CityListViewCellModel(city: city)
-        
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseId, for: indexPath) as? CityListViewCell else {
-            return UITableViewCell()
-        }
-        
         cell.configure(with: cityListViewCellModel)
         
         return cell
