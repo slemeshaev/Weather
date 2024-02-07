@@ -9,6 +9,7 @@
 struct WeatherAPI {
     static let scheme = "https"
     static let host = "api.openweathermap.org"
+    static let units = "metric"
     #warning("You need to paste your own Api Key...")
     static let apiKey = "<Api Key>"
     static let path = "/data/2.5/forecast"

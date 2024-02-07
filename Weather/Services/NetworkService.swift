@@ -23,7 +23,7 @@ class NetworkService {
     private func prepareParameters(city: String) -> [String: String] {
         var parameters = [String: String]()
         parameters["q"] = city
-        parameters["units"] = "metric"
+        parameters["units"] = WeatherAPI.units
         parameters["appid"] = WeatherAPI.apiKey
         return parameters
     }
