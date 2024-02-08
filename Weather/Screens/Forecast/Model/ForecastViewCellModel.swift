@@ -24,6 +24,6 @@ struct ForecastViewCellModel {
     }()
     
     var icon: String { weather.icon }
-    var temperature: String { String(weather.temperature) }
+    var temperature: String { "\(Int(round(weather.temperature)))°" }
     var date: String { dateFormatter.string(from: weather.date) }
 }
