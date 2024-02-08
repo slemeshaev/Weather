@@ -34,7 +34,7 @@ class WeatherList {
         list.forEach { weatherList in
             let weather = Weather(icon: weatherList.weather.first?.icon ?? "",
                                   temperature: weatherList.main.temp,
-                                  date: weatherList.dt)
+                                  date: weatherList.dt_txt)
             addWeather(weather)
         }
     }

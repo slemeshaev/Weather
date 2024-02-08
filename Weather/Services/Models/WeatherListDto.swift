@@ -9,7 +9,7 @@
 import Foundation
 
 struct WeatherListDto: Decodable {
-    let dt: Date
+    let dt_txt: String
     let main: WeatherMainDto
     let weather: [WeatherDto]
 }

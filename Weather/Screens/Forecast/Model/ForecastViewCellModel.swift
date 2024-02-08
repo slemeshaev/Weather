@@ -17,13 +17,14 @@ struct ForecastViewCellModel {
     // MARK: - Properties
     private let weather: Weather
     
-    private let dateFormatter: DateFormatter = {
-        let df = DateFormatter()
-        df.dateFormat = "dd.MM.yyyy HH.mm"
-        return df
-    }()
-    
     var icon: String { weather.icon }
-    var temperature: String { "\(Int(round(weather.temperature)))°" }
-    var date: String { dateFormatter.string(from: weather.date) }
+    
+    var temperature: String {
+        return "\(Int(round(weather.temperature)))°"
+    }
+    
+    var date: String {
+        let date = Date.formattedDateString(from: weather.date)
+        return Date.formattedDateString(from: date)
+    }
 }

@@ -9,19 +9,7 @@
 import Foundation
 
 struct Weather: Codable {
-    // MARK: - Properties
     let icon: String
     let temperature: Double
-    let date: Date
-    
-    // MARK: - Init
-    init(icon: String, temperature: Double, date: Date) {
-        self.icon = icon
-        self.temperature = temperature
-        self.date = date
-    }
-    
-    init() {
-        self.init(icon: String(), temperature: Double(), date: Date())
-    }
+    let date: String
 }
