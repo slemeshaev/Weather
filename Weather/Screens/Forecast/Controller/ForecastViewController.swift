@@ -13,6 +13,7 @@ class ForecastViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var weekDayPicker: WeekDayPicker!
     
     // MARK: - Properties
     private let dataFetcher = NetworkDataFetcher()
@@ -30,7 +31,9 @@ class ForecastViewController: UIViewController {
     private func configureUI() {
         guard let city = city?.name else { return }
         
+        weekDayPicker.delegate = self
         configureNavigationBarWithTitle(city)
+        
         dataFetcher.fetchWeather(for: city) { (weatherResults) in
             guard let fetchedWeathers = weatherResults else { return }
             self.weatherList.addList(fetchedWeathers.list)
@@ -58,5 +61,12 @@ extension ForecastViewController: UICollectionViewDataSource {
         cell.configure(with: model)
         
         return cell
+    }
+}
+
+// MARK: - WeekDayPickerDelegate
+extension ForecastViewController: WeekDayPickerDelegate {
+    func selectedDayTapped(_ passedDay: String?) {
+        print(passedDay ?? String())
     }
 }

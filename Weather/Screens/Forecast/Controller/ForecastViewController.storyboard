@@ -118,11 +118,12 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="rjz-1y-OQy" id="EPo-mW-TT2"/>
+                        <outlet property="weekDayPicker" destination="tKC-Lq-Emm" id="f1z-1b-7MB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="27" y="-120"/>
+            <point key="canvasLocation" x="127" y="-120"/>
         </scene>
     </scenes>
     <resources>

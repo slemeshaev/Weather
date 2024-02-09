@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol WeekDayPickerDelegate: AnyObject {
+    func selectedDayTapped(_ passedDay: String?)
+}
+
 class WeekDayPicker: UIControl {
     // MARK: - Properties
     private var selectedDay: String? = nil {
@@ -25,6 +29,8 @@ class WeekDayPicker: UIControl {
     private var weekDays: [String] = []
     private var buttonDays: [UIButton] = []
     private var stackView: UIStackView!
+    
+    weak var delegate: WeekDayPickerDelegate?
     
     // MARK: - Lifecycle
     override init(frame: CGRect) {
@@ -46,6 +52,7 @@ class WeekDayPicker: UIControl {
     @objc private func selectDay(_ sender: UIButton) {
         guard let index = buttonDays.firstIndex(of: sender) else { return }
         selectedDay = weekDays[index]
+        delegate?.selectedDayTapped(selectedDay)
     }
     
     // MARK: - Private

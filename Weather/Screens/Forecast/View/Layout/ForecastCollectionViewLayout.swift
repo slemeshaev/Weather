@@ -39,15 +39,11 @@ class ForecastCollectionViewLayout: UICollectionViewLayout {
     private func calculateLayout() {
         cacheAttributes = [:]
         
-        guard let collectionView = collectionView else {
-            return
-        }
+        guard let collectionView = collectionView else { return }
         
         let itemsCount = collectionView.numberOfItems(inSection: 0)
         
-        guard itemsCount > 0 else {
-            return
-        }
+        guard itemsCount > 0 else { return }
         
         let bigCellWidth = collectionView.frame.width
         let smallCellWidth = collectionView.frame.width / CGFloat(columnsCount)
