@@ -9,7 +9,7 @@
 import UIKit
 
 protocol WeekDayPickerDelegate: AnyObject {
-    func selectedDayTapped(_ passedDay: String?)
+    func weekDayPickerDidSelect(_ day: String?)
 }
 
 class WeekDayPicker: UIControl {
@@ -52,7 +52,7 @@ class WeekDayPicker: UIControl {
     @objc private func selectDay(_ sender: UIButton) {
         guard let index = buttonDays.firstIndex(of: sender) else { return }
         selectedDay = weekDays[index]
-        delegate?.selectedDayTapped(selectedDay)
+        delegate?.weekDayPickerDidSelect(selectedDay)
     }
     
     // MARK: - Private

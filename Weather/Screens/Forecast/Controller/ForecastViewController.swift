@@ -66,7 +66,7 @@ extension ForecastViewController: UICollectionViewDataSource {
 
 // MARK: - WeekDayPickerDelegate
 extension ForecastViewController: WeekDayPickerDelegate {
-    func selectedDayTapped(_ passedDay: String?) {
-        print(passedDay ?? String())
+    func weekDayPickerDidSelect(_ day: String?) {
+        print("### Day: \(String(describing: day))")
     }
 }
