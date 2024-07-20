@@ -13,7 +13,7 @@
 "Login.SignUp.Cancel" = "Отмена";
 
 // MARK: - City List
-"CityList.Header.Title" = "Список городов";
+"CityList.Header.Title" = "Список";
 "CityList.Header.LogOut" = "Выйти";
 
 // MARK: - Add City

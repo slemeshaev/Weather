@@ -1,5 +1,5 @@
 //
-//  UIViewController.swift
+//  UIViewController+Internal.swift
 //  Weather
 //
 //  Created by Stanislav Lemeshaev on 09.05.2023.
