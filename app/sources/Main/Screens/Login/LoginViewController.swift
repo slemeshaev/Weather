@@ -127,7 +127,7 @@ class LoginViewController: UIViewController {
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.showsVerticalScrollIndicator = false
         
-        logoImageView.image = UIImage(named: "weather_logo")
+        logoImageView.image = UIImage(named: "logo")
         
         titleLabel.text = "Login.LogoTitle".localized
         titleLabel.textColor = Color.ContentPrimary.Text.title

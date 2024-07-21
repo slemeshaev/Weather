@@ -423,9 +423,9 @@
 		66FE7F832A0E88AA0052D23E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				66ADAFB92B756FAD002F60AA /* Date+Formatter.swift */,
-				66FE7F7C2A0E86580052D23E /* String+Localization.swift */,
 				663B00C92A1002DA00922DE5 /* String+Color.swift */,
+				66FE7F7C2A0E86580052D23E /* String+Localization.swift */,
+				66ADAFB92B756FAD002F60AA /* Date+Formatter.swift */,
 				6620A98B2A0A6FC70082718F /* UIViewController+Internal.swift */,
 			);
 			path = Extensions;
