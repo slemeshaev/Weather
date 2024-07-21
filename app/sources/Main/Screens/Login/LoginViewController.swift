@@ -84,14 +84,14 @@ class LoginViewController: UIViewController {
     }
     
     @objc private func hideKeyboard() {
-        self.scrollView?.endEditing(true)
+        scrollView?.endEditing(true)
     }
     
     // MARK: - Private
     private func addObservers() {
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWasShown),
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWasShown),
                                                name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillBeHidden(notification:)),
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillBeHidden(notification:)),
                                                name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
